@@ -10,7 +10,7 @@ let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireCo
 try {importAll(require.context('../assets/icons', true, /\.svg$/));} catch (error) {console.log(error);}
 export default {
   props:['name'],
-  name: 'Icon'
+  name: 'Icon',
 };
 </script>
 
