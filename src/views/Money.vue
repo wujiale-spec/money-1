@@ -1,5 +1,6 @@
 <template>
   <Layout class-prefix="layout">
+    {{ record }}
     <NumberPad :value.sync="record.amount" @submit="saveRecord"/>
     <Types :value.sync="record.type"/>
     <div class="notes">
@@ -25,8 +26,8 @@ import tagListModel from '@/models/tagListModel';
 
 
 const recordList = recordListModel.fetch();
-const tagList = tagListModel.fetch();
-
+tagListModel.fetch();
+const tagList = tagListModel.data;
 @Component({
   components: {Tags, FormItem, Types, NumberPad}
 })
@@ -66,7 +67,8 @@ export default class Money extends Vue {
   display: flex;
   flex-direction: column-reverse;
 }
-.notes{
+
+.notes {
   padding: 12px 0;
 }
 </style>
