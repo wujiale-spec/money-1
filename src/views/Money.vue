@@ -20,9 +20,9 @@ import Types from '@/components/money/Types.vue';
 import FormItem from '@/components/money/FormItem.vue';
 import Tags from '@/components/money/Tags.vue';
 import {Component, Watch} from 'vue-property-decorator';
-import recordListModel from '@/models/RecordListModel';
+import recordListModel from '@/models/RecordListModel.ts';
 import {RecordItem} from '@/custom.d.ts';
-import tagListModel from '@/models/tagListModel';
+import tagListModel from '@/models/tagListModel.ts';
 
 
 const recordList = recordListModel.fetch();
