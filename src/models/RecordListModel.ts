@@ -1,4 +1,3 @@
-import {RecordItem} from '@/custom.d.ts';
 import clone from '@/lib/clone';
 
 const localStorageKeyName = 'recordList';

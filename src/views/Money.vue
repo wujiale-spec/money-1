@@ -20,19 +20,18 @@ import FormItem from '@/components/money/FormItem.vue';
 import Tags from '@/components/money/Tags.vue';
 import {Component, Watch} from 'vue-property-decorator';
 import recordListModel from '@/models/RecordListModel.ts';
-import {RecordItem} from '@/custom.d.ts';
-import tagListModel from '@/models/tagListModel.ts';
 
 
 const recordList = recordListModel.fetch();
-tagListModel.fetch();
-const tagList = tagListModel.data;
+
 @Component({
   components: {Tags, FormItem, Types, NumberPad}
 })
 export default class Money extends Vue {
-  tags = tagList;
-  recordList: RecordItem[] = recordList;
+  tags = window.tagList;
+  // eslint-disable-next-line no-undef
+  recordList: RecordItem[]= recordList;
+  // eslint-disable-next-line no-undef
   record: RecordItem = {
     tags: [], notes: '', type: '-', amount: 0
   };
