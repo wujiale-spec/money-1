@@ -1,9 +1,14 @@
+type RootState = {
+  recordList: RecordItem[],
+  tagList: Tag[],
+  currentTag?: Tag
+}
 type RecordItem = {
-  tags: string[]
+  tags: Tag[]
   notes: string
   type: string
   amount: number //TS除了可以写类型
-  createdAt?: Date //问好表示createdAt可以不存在
+  createdAt?: string //问好表示createdAt可以不存在
 }
 type TagListModel = {
   data: Tag[]
