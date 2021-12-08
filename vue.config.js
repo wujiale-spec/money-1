@@ -1,6 +1,9 @@
 const path = require('path')
 
 module.exports = {
+  publicPath: process.env.NODE_ENV==='production'
+      ? '/money-website/'
+      :'/',
   lintOnSave: false,
   chainWebpack: config => {
     const dir = path.resolve(__dirname, 'src/assets/icons')//确定icon所在的目录，__dirname就是当前目录
